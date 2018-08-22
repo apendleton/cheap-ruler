@@ -1,0 +1,19 @@
+[package]
+name = "cheap-ruler"
+version = "0.1.0"
+authors = ["Andrew Pendleton <andrew@mapbox.com>"]
+license = "MIT"
+build = "build.rs"
+
+[lib]
+name = "cheap_ruler"
+crate-type = ["dylib"]
+
+[build-dependencies]
+neon-build = "0.2.0"
+
+[dependencies]
+neon = "0.2.0"
+neon-serde = { git = "https://github.com/apendleton/neon-serde.git", branch = "oh-point-two" }
+serde = "1.0.72"
+serde_derive = "1.0.72"

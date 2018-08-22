@@ -6,7 +6,9 @@
   "jsdelivr": "cheap-ruler.js",
   "unpkg": "cheap-ruler.js",
   "types": "index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "neon-cli": "^0.2.0"
+  },
   "devDependencies": {
     "@turf/turf": "^5.0.4",
     "benchmark": "^2.1.4",
@@ -23,9 +25,8 @@
     "pretest": "eslint index.js bench test/*.js && npm run types",
     "test": "tape test/test.js",
     "types": "tsc test/types.ts && rm test/types.js",
-    "build": "browserify index.js -s cheapRuler > cheap-ruler.js",
-    "build-min": "browserify index.js -s cheapRuler | uglifyjs -c -m > cheap-ruler.min.js",
-    "prepare": "npm run build && npm run build-min",
+    "build": "neon build",
+    "prepare": "npm run build",
     "cov": "nyc tape test/test.js"
   },
   "files": [

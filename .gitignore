@@ -5,3 +5,9 @@ coverage
 cheap-ruler.js
 cheap-ruler.min.js
 test/types.js
+native/target
+native/index.node
+native/artifacts.json
+**/*~
+**/node_modules
+**/.DS_Store
